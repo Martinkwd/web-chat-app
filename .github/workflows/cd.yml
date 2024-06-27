@@ -29,8 +29,8 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v4
         with:
-          context: ./socket-chat-app
-          file: ./dockerfile
+          context: ./
+          file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/web-chat-app:latest
       - name: Image digest
